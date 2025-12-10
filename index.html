@@ -1,223 +1,303 @@
-<html manifest="Cache.manifest">
+<html>
 <head>
-<style>
-    html, body{
-margin:auto;
-font-family:sans-serif;
-font-size:20px;
-font-weight:lighter;
-text-align: center;
-color:#FFFFFF;
-/* =================================================== */
-/* ⭐️ صورة الخلفية الرئيسية ⭐️ */
-/* ⚠️ يجب تغيير اسم الملف هنا ليطابق اسم الصورة التي سترفعها */
-background-image: url('my_background_image.jpg'); 
-background-size: cover; 
-background-repeat: no-repeat;
-background-attachment: fixed;
-/* =================================================== */
-overflow: hidden;
-}
-.modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgba(0,0,0,0.4); 
-}
- .content {
-  width:90%;
-  height:auto; 
-  margin-left:3.5%;
-  /* ⭐️ الخلفية الداكنة لشريط المحتوى السفلي ⭐️ */
-  background:rgba(0,0,0,0.7); 
-  color:white;
-  margin-top:0%;
-  font-size:25px;
-  text-align:center;
-  border-radius:30px;
-  padding:20px;
-  line-height:12px;
-  position:fixed; 
-  bottom:0px; 
-  left: 3.5%;
-  right: 3.5%;
-  z-index: 10; 
- }
- .title {
-  font-size:40px;
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-weight:bolder;
-  margin-bottom:10px;
- }
- .yellow {
-  color:yellow;
- }
-
-.hue {
-  color: yellow !important; 
-  padding: 10px;
-  border-radius: 10px;
-  background: transparent !important; 
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.hue:hover{
-  color:yellow !important;
-  background:transparent !important;
-}
-
-@keyframes hue-rotate{ 
- 0%{filter:hue-rotate(0deg);-webkit-filter:hue-rotate(0deg);}
- 100%{filter:hue-rotate(360deg);-webkit-filter:hue-rotate(360deg);}
-}
-@keyframes hue-shadow{ 
- 0%{box-shadow: 0px 0px 50px yellow;} 
- 100%{box-shadow: 0px 0px 50px yellow;}
-}
-@keyframes hue{
- 0%{filter:hue-rotate(0deg);-webkit-filter:hue-rotate(0deg);}
- 100%{filter:hue-rotate(360deg);-webkit-filter:hue-rotate(360deg);}
-}
- 
- .text {
-  padding-bottom:5px; 
-  line-height: 25px; 
- }
-  .back {
-   font-size:25px;
-   margin-top:10px;
-   display:block;
-   line-height:55px;
-   width:20%;
-   text-decoration:none;
-   height:50px;
-   background:white;
-   color:black;
-   border-radius:15px;
-  }
-  .back:hover{
-   border:2px solid white;
-   background:transparent;
-   box-sizing:border-box;
-   color:white;
-  }
- #psip {
-  text-align: center;
-  margin-left: 38%;
-  margin-right: auto;
-  width:15%;
-  display:flex;
-  position: absolute;
-  background: transparent; 
-  border-radius: 2em;
-  border: none;
-  padding: 0.8em;
-  color: #ffffff;
-  padding-left: 1.5em;
-  outline: none;
-}
-
-.modal-content {
-  font-family: BFARNAZ;
-  font-size: 18px;
-  position: relative;
-  background-color: #dddddd;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s
-}
-
-/* ⭐️ الأزرار ⭐️ */
-button {
-            background: transparent; 
-            border: 2px solid black;
-            border-radius: 10px;
-            width: 200px;
-            height: 43px;            
-            text-align: center;
-            color: black !important; 
-}
-button:hover {
-            box-shadow: 0 5px 50px 0 white; 
-            color: white !important; 
-			background-color: #0F0F53; 
-}
-
-hr {
-padding:0;
-margin:0;
-opacity:0.7;
-}
-
-#progress {
- font-weight:bold;
- text-shadow: 4px 4px 4px black;
- font-size:17px;
-}
-.pointer {cursor: pointer;}
-
-h1 {
-text-shadow: 0.1em 0.1em 0.2em black;
-font-size: 25px;
-text-align: center;
-color: white;
-}
-
-.TextCaption{
-display: block;
-    font-size: 20px;
-    color: #fff;
-    text-decoration: none;
-}
-
-a img {
-    display: inline-block;  text-decoration: none;
-}
-
-a {
-    display: inline-block;  text-decoration: none;
-}
-
-a:hover img, a:hover .TextCaption{
-transform: scale(1.1)
-}
-
-    </style>
 <meta charset="utf-8">
-<title>ALssouRy Host Auto Exploit GoldHen new PSFree Webkit Lapse 7.XX - 8.XX - 9.XXFW</title>
+<title>ALssouRy Host For PS4 505 & 672 & 702 & 75X & 900</title> 
+<style type="text/css">
+/* =================================================== */
+/* ⚠️ التحكم الوحيد بالخلفية - تم تأكيد المسار: my_cache_background.jpg */
+html, body {
+  margin: 0 !important; 
+  padding: 0 !important;
+  height: 100%;
+  width: 100%;
+  background-image: url("my_cache_background.jpg") !important; /* المسار المؤكد */
+  background-size: cover !important;       
+  background-repeat: no-repeat !important;
+  background-position: center !important; 
+}
+/* =================================================== */
+
+body {
+  font-family:sans-serif;
+  font-size:20px;
+  font-weight:lighter;
+  text-align: center;
+  color:#FFFFFF;
+  overflow: hidden;
+  height:95%; 
+}
+
+/* =================================================== */
+/* ⭐️ تصميم الأزرار الموحد (تأثير التوهج المتحرك Hue الكامل) ⭐️ */
+/* =================================================== */
+button {
+            /* 1. جعل النص أسود ثابت دائمًا */
+            color: #000 !important; 
+            
+            /* 2. فصل الخلفية المتحركة عن العنصر الرئيسي */
+            position: relative; 
+            z-index: 1; /* تأكيد أن النص فوق الخلفية */
+            background: transparent !important; /* جعل العنصر الرئيسي شفاف */
+
+            /* خصائص التوهج الثابتة (للحواف) */
+            box-shadow: 0px 0px 15px yellow; 
+            border: 1px solid yellow; 
+
+            /* ... الخصائص الشكلية الأخرى ... */
+            padding: 10px; 
+            border-radius: 10px;
+            width: 140px; 
+            height: 43px; 
+            text-align: center;
+            padding: 6px;
+            margin: 4px; 
+            display: inline-block; 
+            font-size:22px !important;
+            transition: all 0.2s; 
+}
+
+/* 💡 الخلفية المتحركة المنفصلة (::before) - تتحرك دون التأثير على النص */
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* اللون الأساسي للخلفية الصفراء قبل الدوران */
+    background: rgba(255,255,0,0.4); 
+    border-radius: inherit;
+    z-index: -1; 
+    
+    /* تطبيق حركة Hue-rotate هنا فقط */
+    animation: hue 5s linear infinite; 
+    -webkit-animation: hue 5s linear infinite;
+}
+
+
+/* تعريف حركة Hue */
+@keyframes hue{
+    0%{filter:hue-rotate(0deg);-webkit-filter:hue-rotate(0deg);}
+    100%{filter:hue-rotate(360deg);-webkit-filter:hue-rotate(360deg);}
+}
+
+
+/* الألوان المخصصة للنص داخل الزر - تم توحيدها لتكون أسود ثابت */
+.yellow-text, .green-text { 
+    color: #000 !important; /* أسود ثابت */
+} 
+
+/* زر الـ Trainer الأزرق (استثناء: لا يحتوي على حركة Hue-rotate) */
+.blue-bg { 
+    /* إلغاء الشفافية وإعادة اللون الأساسي للزر الأزرق */
+    background:rgba(11, 11, 97, 0.7) !important; 
+    box-shadow: 0px 0px 15px #1E90FF; 
+    border: 1px solid #1E90FF; 
+    color: white !important; /* النص أبيض هنا لأنه يتناسب مع الخلفية الزرقاء الداكنة */
+}
+
+/* إزالة الخلفية المتحركة من الزر الأزرق */
+.blue-bg::before {
+    content: none; 
+}
+
+button:hover {
+    box-shadow: 0 0 40px 10px #FFD700; 
+    /* إعطاء خلفية سوداء للعنصر الرئيسي عند التحويم */
+    background-color: rgba(0, 0, 0, 0.9) !important; 
+    /* 💡 تم إبقاء لون النص أسود أو توحيده إلى #000 لضمان الثبات */
+    color: #000 !important; 
+    border: 2px solid #FFD700; 
+}
+/* ملاحظة: النص الأزرق يتغير للأبيض عند التحويم لأنه أصلاً لونه أبيض ليتناسب مع الخلفية الزرقاء */
+.blue-bg:hover {
+    color: white !important;
+}
+
+/* عند التحويم، نزيل الخلفية المتحركة ونستخدم الخلفية السوداء الجديدة */
+button:hover::before {
+    content: none; 
+}
+
+/* =================================================== */
+/* التوزيع على عمودين (للتوزيع الأقصى على الأطراف) */
+/* =================================================== */
+#MyItems {
+  width: 100%; 
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: 10px;
+}
+
+.button-col {
+  width: 45%; 
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  vertical-align: top;
+}
+
+.col-left {
+  float: left;
+  margin: 0; 
+  text-align: left; 
+}
+
+.col-right {
+  float: right;
+  margin: 0; 
+  text-align: right; 
+}
+
+/* ⭐️ المنطقة المركزية (للأزرار العريضة) ⭐️ */
+.central-area {
+    clear: both; 
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* الأزرار العريضة للمنطقة المركزية */
+.wide-button {
+    width: 350px !important; 
+    display: inline-block !important; 
+    margin: 8px 10px !important; 
+}
+
+/* =================================================== */
+/* العناصر العلوية والسفلية - تم تعديلها لتشمل التاريخ والوقت */
+/* =================================================== */
+.header-bar {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    background: rgba(0, 0, 0, 0.6); 
+    border-radius: 5px;
+    margin: 10px auto; 
+    width: 95%; 
+    max-width: 1200px; 
+    padding: 5px 10px;
+}
+
+#clock, #date {
+    font-weight:bold;
+    font-size:20px; 
+    color: yellow; /* لضمان وضوح التاريخ والوقت */
+    white-space: nowrap; /* لمنع كسر السطر */
+}
+
+.main-title {
+    font-size:25px;
+    text-align:center;
+    color:yellow;
+    flex-grow: 1; /* للسماح للعنوان بأخذ المساحة المتاحة في المنتصف */
+    margin: 0 10px;
+}
+
+.content {
+    width:60%; 
+    margin: 10px auto;
+    background:rgba(0,0,0,0.5);
+    color:white;
+    font-size:25px;
+    text-align:center;
+    border-radius:30px;
+    padding:10px; 
+    line-height:40px; 
+    clear: both;
+}
+
+.yellow {color:yellow;}
+
+.hue {color:yellow;padding:10px;border-radius:10px;box-shadow: 0px 0px 50px yellow;color:white;background:rgba(255,255,0,0.4);} 
+
+.text {padding-bottom:0px;} 
+.pointer {cursor: pointer;}
+</style>
 <script>
-if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
-</script>
- </head>
-<body> <br>
-<h1 style='text-shadow: 4px 4px 4px black;font-size:30px;text-align:center;color:yellow;'>ALssouRy Host Auto Exploit GoldHen new PSFree Webkit Lapse 7.XX - 8.XX - 9.XXFW</h1>
-<h1 id=progress style='font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:white;'>Jailbreaking....</h1><br>
-<div style="text-align:center;display:none">
-<button id="button-Payload" onMouseOver="progress.innerHTML='GoldHen v2.4 Beta 18 3 by SISTR0 for PS4 9.00 Fw'" onmouseout="progress.innerHTML='Status'" type="button" onclick="goldhen()" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;' > GoldHenV2.4b18.7</button>
+    function showdate() {
+  var dt = new Date();
+    Hour= dt.getHours();
+  Minute= dt.getMinutes();
+     Day=dt.getDate();
+   Month=dt.getMonth()+1;
+   Year=dt.getFullYear();
+if (Minute < 10) { Minute = "0" + Minute; };
+if (Hour < 10) { Hour = "0" + Hour; };
+document.getElementById("date").innerHTML = (Day+"/"+Month+"/"+Year);
+document.getElementById("clock").innerHTML = (Hour+":"+Minute);
+  }
+  
+  setInterval(showdate,1000); </script>
+</head>
+<body>
+<div id="container"  style="">
+
+<div class="header-bar">
+    <span id="date"></span>
+    <h1 class='main-title'>ALssouRy Host For PS4 505 & 672 & 702 & 75X & 900</h1>
+    <span id="clock"></span>
 </div>
 
-<div id=all class="content" >
- 	    <div class="text" >
- 	        <span style="text-shadow: 4px 4px 4px black;" class="yellow" >Designed, Compiled by :</span >&nbsp;&nbsp; <span style="text-shadow: 4px 4px 4px black;" class="hue" >ALssouRy</span >
- 	        <br><span style="text-shadow: 4px 4px 4px black;" class="yellow" >Super Special Thanks To :</span >&nbsp;&nbsp; <a style="font-size:30px;text-align:center;text-shadow: 4px 4px 4px black;color:white;">Sleirsgoevy , Al Azif , ChendoChap , SiSTRo ,Abc ,Xalfia ,Specter ,Znullptr ... </a>
-	    </div>
+<h1 id=msgs2 style='font-size:25px;text-align:center;color:white;'>Status</h1>
+
+<div id="MyItems">
+    <div class="button-col col-left">
+        <a href="copych/index.html"><button class="pointer yellow-text" onMouseOver="msgs2.innerHTML='Copy Cheat For 505 & 672 & 702 & 755 & 900'"; onmouseout="msgs2.innerHTML='Status'" type="button"><B>Copy Cheat </B></button></a>
+        <a href="binloader/index.html"><button class="pointer yellow-text" onMouseOver="msgs2.innerHTML='Binloader For 505 & 672 & 702 & 755 & 900'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>Binloader </B></button></a>
+        <a href="505/index.html"><button class="pointer" onMouseOver="msgs2.innerHTML='Karo Host For 505'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>5.05 old</B></button></a><br>
+        
+        <a href="505Gold/index.html"><button class="pointer yellow-text" onMouseOver="msgs2.innerHTML='Karo Host Gold For 505'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>5.05 Gold</B></button></a>
+        <a href="672/index.html"><button class="pointer green-text" onMouseOver="msgs2.innerHTML='Karo Host Manual Exploit Full Cache and Compressed version For 672'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>6.72 </B></button></a>
+        <a href="672A/index.html"><button class="pointer green-text" onMouseOver="msgs2.innerHTML='Karo Host Auto Exploit Full Cache and Compressed version For 672'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>6.72A </B></button></a><br>
+
+        <a href="672L/index.html"><button class="pointer" onMouseOver="msgs2.innerHTML='Karo Host Light For 672'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>6.72L </B></button></a>
+        <a href="702/index.html"><button class="pointer green-text" onMouseOver="msgs2.innerHTML='Karo New Host Auto Exploit and Compressed New Webkit PSFree version For 702'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>7.02</B></button></a>
+        <a href="702L/index.html"><button class="pointer" onMouseOver="msgs2.innerHTML='Karo Host For 702 New Webkit PSFree Light version'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>7.02L</B></button></a><br>
+
+        <a href="755/index.html"><button class="pointer green-text" onMouseOver="msgs2.innerHTML='Karo Host Auto Exploit and Compressed New Webkit PSFree version For 75X'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>7.55</B></button></a>
+        <a href="755L/index.html"><button class="pointer" onMouseOver="msgs2.innerHTML='Karo Host For 75X New Webkit PSFree Light version'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>7.55L</B></button></a>
+        <a href="900L/index.html"><button class="pointer yellow-text" onMouseOver="msgs2.innerHTML='Karo Host Auto Explot Light + New Webkit PSFree For 900'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>9.00L</B></button></a><br>
+
+        <a href="900NM/index.html"><button class="pointer green-text" onMouseOver="msgs2.innerHTML='Karo Host Manual Exploit Full Cache and New Webkit PSFree + Compressed version For 900'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>9.00NM</B></button></a>
+        <a href="restore/index.html"><button class="pointer yellow-text" onMouseOver="msgs2.innerHTML='Restore Hosts to Users Guide by Karo For 505 & 672 & 702 & 755 & 900'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>Restore Host</B></button></a>
+        <a href="restore2/index.html"><button class="pointer yellow-text" onMouseOver="msgs2.innerHTML='Restore PS4Trainer Offline to Users Guide by Karo For 505 & 672 & 702 & 755 & 900'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>Restore PS4Trainer Offline</B></button></a>
+        
+    </div>
+
+    <div class="button-col col-right">
+        <a href="https://karo218.ir/espweb/index.html"><button class="pointer green-text" onMouseOver="msgs2.innerHTML='Karo WEB ESP For 505 & 672 & 702 & 755 & 900'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>WEB ESP </B></button></a>
+        <a href="Goldhen505/index.html"><button class="pointer yellow-text" onMouseOver="msgs2.innerHTML='Karo Host Goldhen V2.416b2 For 505'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>Goldhen505</B></button></a>
+        <a href="http://karo218.ir/esp505tr/index.html"><button class="pointer" onMouseOver="msgs2.innerHTML='ESP host (ps4trainer + goldhen + webrte + binloader) Host For 505'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>ESP505tr</B></button></a><br>
+
+        <a href="Goldhen672/index.html"><button class="pointer yellow-text" onMouseOver="msgs2.innerHTML='Karo Host Goldhen V2.416b2 For 672'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>Goldhen672</B></button></a>
+        <a href="http://karo218.ir/esp672tr/index.html"><button class="pointer" onMouseOver="msgs2.innerHTML='ESP host (ps4trainer + goldhen + webrte + binloader) Host For 672'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>ESP672tr</B></button></a>
+        <a href="http://karo218.ir/702Gold/index.html"><button class="pointer yellow-text" onMouseOver="msgs2.innerHTML='Karo Host Gold New Webkit PSFree with payload sender For 702'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>7.02 Gold</B></button></a><br>
+
+        <a href="G702/index.html"><button class="pointer yellow-text" onMouseOver="msgs2.innerHTML='Karo Host Goldhen V2.3 with New Webkit PSFree For 700 - 702'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>Goldhen702</B></button></a>
+        <a href="http://karo218.ir/esp702tr/index.html"><button class="pointer" onMouseOver="msgs2.innerHTML='ESP host (ps4trainer + goldhen + webrte + binloader) Host For 702'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>ESP702tr</B></button></a>
+        <a href="http://karo218.ir/755Gold/index.html"><button class="pointer yellow-text" onMouseOver="msgs2.innerHTML='Karo Host Gold New Webkit PSFree with payload sender For 75X'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>7.55 Gold</B></button></a><br>
+
+        <a href="G755/index.html"><button class="pointer yellow-text" onMouseOver="msgs2.innerHTML='Karo Host Goldhen 2.3 For 755 New Webkit PSFree'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>Goldhen755</B></button></a>
+        <a href="http://karo218.ir/esp755tr/index.html"><button class="pointer" onMouseOver="msgs2.innerHTML='ESP host (ps4trainer + goldhen + webrte + binloader) Host For 755'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>ESP755tr</B></button></a>
+        <a href="900New/index.html"><button class="pointer green-text" onMouseOver="msgs2.innerHTML='Karo Host Auto Exploit Compressed + New Webkit PSFree Version 9.00 fw'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>9.00 New</B></button></a><br>
+
+        <a href="G900/index.html"><button class="pointer yellow-text" onMouseOver="msgs2.innerHTML='Karo Host auto Exploit + Goldhen V2.4b16,2 + New Webkit PSFree For 900'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>Goldhen900</B></button></a>
+        <a href="http://karo218.ir/esp900tr/index.html"><button class="pointer" onMouseOver="msgs2.innerHTML='ESP host (ps4trainer + goldhen + webrte + binloader) Host For 900'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>ESP900tr</B></button></a>
+        <a href="http://karo218.ir/esp/index.html"><button class="pointer yellow-text" onMouseOver="msgs2.innerHTML='Restore ESP hosts (ps4trainer+goldhen+webrte+binloader) to Users Guide by Karo For All FW'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>Restore ESP Hosts</B></button></a> 
+        
+    </div>
+
+    <div class="central-area">
+        <a href="g2allpro/index.html"><button class="pointer yellow-text wide-button" onMouseOver="msgs2.innerHTML='Karo Host auto Exploit + Goldhen 2.4b18.7 + New Webkit PSFree + Lapse For 7.02-9.60 Pro'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>G2AllPro</B></button></a>
+        <a href="g2all/index.html"><button class="pointer yellow-text wide-button" onMouseOver="msgs2.innerHTML='Karo Host auto Exploit + Goldhen 2.4b18.7 + New Webkit PSFree + Lapse For 7.02-9.60 Orginal'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>G2All</B></button></a><br>
+        <a href="http://karo218.ir/PS4TRAINER/index.html"><button class="pointer wide-button blue-bg" onMouseOver="msgs2.innerHTML='PS4Trainer Offline'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>PS4Trainer Offline (27.01.2024)</B></button></a>
+    </div>
+    
+<div class="content" >
+ 	<div class="text" >
+ 	 <br><span class="yellow" >Designed, Ported and Compiled by :</span >&nbsp;&nbsp; <span class="hue" style="animation: hue 5s linear infinite;-webkit-animation: hue 5s linear infinite;">ALssouRy</span>
+ 	</div>
+ </div>
 </div>
 </body>
-<script src="./exploit.js"></script>
 </html>
