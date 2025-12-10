@@ -28,14 +28,11 @@ body {
 }
 
 /* =================================================== */
-/* تصميم الأزرار الموحد (شفافية عالية) */
+/* تصميم الأزرار الموحد (تأثير التوهج الثابت) */
 /* =================================================== */
 button {
-            /* 💡 التعديل هنا: خلفية سوداء شفافة جداً (الشفافية 0.3) */
-            background:rgba(0, 0, 0, 0.3); 
-		    box-shadow: 0 0 5px 0 #FFD700; /* ظل ذهبي خفيف */
-            border: 1px solid rgba(255, 215, 0, 0.5); /* حد ذهبي خفيف وشبه شفاف */
-            border-radius: 10px;
+            background:rgba(0, 0, 0, 0.7); /* خلفية سوداء داكنة شبه شفافة */
+		    border-radius: 10px;
             width: 170px; 
             height: 43px;            
             text-align: center;
@@ -44,19 +41,23 @@ button {
             color: white !important; /* النص أبيض إجباريًا */
             display: inline-block; 
             font-size:22px !important;
-            transition: all 0.2s; /* إضافة تأثير انتقال سلس */
+            transition: all 0.2s; 
+
+            /* 💡 تطبيق خصائص التوهج (hue effect) على الزر */
+            border: 2px solid yellow; /* إطار أصفر واضح */
+            box-shadow: 0px 0px 10px yellow; /* ظل توهج أصفر */
 }
 
-/* الألوان المخصصة للنص داخل الزر (مع الحفاظ على شفافية الخلفية) */
+/* الألوان المخصصة للنص داخل الزر */
 .yellow-text { color: yellow !important; }
 .green-text { color: lightgreen !important; }
-.blue-bg { background:rgba(11, 11, 97, 0.5) !important; /* خلفية زرقاء داكنة شفافة لزر Trainer */ }
+.blue-bg { background:rgba(11, 11, 97, 0.7) !important; /* خلفية زرقاء داكنة لزر Trainer */ }
 
 
 button:hover {
-            /* زيادة الشفافية قليلاً عند التمرير لجعل الزر يبرز */
-            box-shadow: 0 0 20px 3px #FFFFFF; 
-            background-color: rgba(0, 0, 0, 0.6); /* خلفية سوداء أغمق قليلاً عند التمرير */
+            /* عند التمرير، زيادة التوهج قليلاً وتغيير لون الإطار */
+            box-shadow: 0 0 30px 5px #FFFFFF; 
+            background-color: rgba(0, 0, 0, 0.9); /* خلفية سوداء أغمق قليلاً عند التمرير */
             color: white !important;
             border: 2px solid white; /* حد أبيض ساطع عند التمرير */
 }
@@ -116,7 +117,10 @@ button:hover {
 #date {float:left;margin-left:1.25%;font-weight:bold;margin-top: 18px;font-size:28px;color: white;}
 .content {width:80%;margin: 10px auto;background:rgba(0,0,0,0.5);color:white;font-size:25px;text-align:center;border-radius:30px;padding:20px;line-height:40px; clear: both;}
 .yellow {color:yellow;}
+/* خصائص الـ hue التي استخدمتها في الشريط السفلي */
 .hue {color:yellow;padding:10px;border-radius:10px;animation:hue 5s linear infinite;-webkit-animation: hue 5s linear infinite;box-shadow: 0px 0px 50px yellow;color:white;background:rgba(255,255,0,0.4);}
+
+/* تعريف الحركة (للتذكير: الحركة لن تُطبق على الأزرار إلا إذا أضفنا خصائص الـ animation لها) */
 @keyframes hue{0%{filter:hue-rotate(0deg);-webkit-filter:hue-rotate(0deg);}100%{filter:hue-rotate(360deg);-webkit-filter:hue-rotate(360deg);}}
 .text {padding-bottom:50px;}
 .pointer {cursor: pointer;}
