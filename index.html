@@ -46,11 +46,11 @@ button {
             border: 1px solid yellow; 
 
             /* الأبعاد والتوزيع */
-            width: 140px; /* 💡 تم ضبط العرض لضمان ظهور 3 أزرار في سطر واحد داخل 45% */
+            width: 140px; 
             height: 43px; 
             text-align: center;
             padding: 6px;
-            margin: 4px; /* تم تصغير الهامش لزيادة فرصة احتواء 3 أزرار */
+            margin: 4px; 
             display: inline-block; 
             font-size:22px !important;
             transition: all 0.2s; 
@@ -87,14 +87,14 @@ button:hover {
 /* التوزيع على عمودين (للتوزيع الأقصى على الأطراف) */
 /* =================================================== */
 #MyItems {
-  width: 100%; /* توسيع لأقصى عرض */
+  width: 100%; 
   margin: 0 auto;
   overflow: hidden;
   padding-top: 10px;
 }
 
 .button-col {
-  width: 45%; /* تضييق الأعمدة لترك مساحة مركزية 10% */
+  width: 45%; 
   height: auto;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -103,14 +103,14 @@ button:hover {
 
 .col-left {
   float: left;
-  margin: 0; /* 💡 أقصى اليسار */
-  text-align: left; /* ضمان اصطفاف الأزرار من اليسار داخل العمود */
+  margin: 0; 
+  text-align: left; 
 }
 
 .col-right {
   float: right;
-  margin: 0; /* 💡 أقصى اليمين */
-  text-align: right; /* ضمان اصطفاف الأزرار من اليمين داخل العمود */
+  margin: 0; 
+  text-align: right; 
 }
 
 /* ⭐️ المنطقة المركزية (للأزرار العريضة) ⭐️ */
@@ -132,12 +132,27 @@ button:hover {
 /* =================================================== */
 #clock{float:right;margin-right:2.25%;margin-top: 18px;font-weight:bold;font-size:28px;color: white;}
 #date {float:left;margin-left:1.25%;font-weight:bold;margin-top: 18px;font-size:28px;color: white;}
-.content {width:80%;margin: 10px auto;background:rgba(0,0,0,0.5);color:white;font-size:25px;text-align:center;border-radius:30px;padding:20px;line-height:40px; clear: both;}
+
+/* 💡 تم تصغير المستطيل السفلي */
+.content {
+    width:60%; /* العرض تم تصغيره */
+    margin: 10px auto;
+    background:rgba(0,0,0,0.5);
+    color:white;
+    font-size:25px;
+    text-align:center;
+    border-radius:30px;
+    padding:10px; /* تم تصغير الهامش الداخلي الرأسي */
+    line-height:40px; 
+    clear: both;
+}
+
 .yellow {color:yellow;}
 
 .hue {color:yellow;padding:10px;border-radius:10px;box-shadow: 0px 0px 50px yellow;color:white;background:rgba(255,255,0,0.4);} 
 
-.text {padding-bottom:50px;}
+/* 💡 تم إزالة الفراغ السفلي الكبير */
+.text {padding-bottom:0px;} 
 .pointer {cursor: pointer;}
 </style>
 <script>
@@ -210,7 +225,8 @@ document.getElementById("clock").innerHTML = (Hour+":"+Minute);
 
     <div class="central-area">
         <a href="g2allpro/index.html"><button class="pointer yellow-text wide-button" onMouseOver="msgs2.innerHTML='Karo Host auto Exploit + Goldhen 2.4b18.7 + New Webkit PSFree + Lapse For 7.02-9.60 Pro'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>G2AllPro</B></button></a>
-        <a href="g2all/index.html"><button class="pointer yellow-text wide-button" onMouseOver="msgs2.innerHTML='Karo Host auto Exploit + Goldhen 2.4b18.7 + New Webkit PSFree + Lapse For 7.02-9.60 Orginal'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>G2All</B></button></a><br> <a href="http://karo218.ir/PS4TRAINER/index.html"><button class="pointer wide-button blue-bg" onMouseOver="msgs2.innerHTML='PS4Trainer Offline'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>PS4Trainer Offline (27.01.2024)</B></button></a>
+        <a href="g2all/index.html"><button class="pointer yellow-text wide-button" onMouseOver="msgs2.innerHTML='Karo Host auto Exploit + Goldhen 2.4b18.7 + New Webkit PSFree + Lapse For 7.02-9.60 Orginal'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>G2All</B></button></a><br>
+        <a href="http://karo218.ir/PS4TRAINER/index.html"><button class="pointer wide-button blue-bg" onMouseOver="msgs2.innerHTML='PS4Trainer Offline'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>PS4Trainer Offline (27.01.2024)</B></button></a>
     </div>
     
 <div class="content" >
