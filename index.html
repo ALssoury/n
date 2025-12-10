@@ -28,42 +28,60 @@ body {
 }
 
 /* =================================================== */
-/* تصميم الأزرار الموحد (تأثير التوهج الثابت) */
+/* ⭐️ تصميم الأزرار الموحد (تأثير التوهج المتحرك Hue الكامل) ⭐️ */
 /* =================================================== */
 button {
-            background:rgba(0, 0, 0, 0.7); /* خلفية سوداء داكنة شبه شفافة */
-		    border-radius: 10px;
+            /* 💡 خصائص Hue الكاملة */
+            color: white !important; /* النص أبيض إجباريًا */
+            background:rgba(255,255,0,0.4); /* خلفية صفراء شبه شفافة */
+            padding: 10px; /* زيادة بسيطة في البادينج ليتناسب مع الـ hue */
+            border-radius: 10px;
+            
+            /* خصائص التوهج والحركة */
+            animation: hue 5s linear infinite; /* الحركة اللونية المتغيرة */
+            -webkit-animation: hue 5s linear infinite;
+            box-shadow: 0px 0px 15px yellow; /* ظل توهج قوي */
+            border: 1px solid white; /* إطار أبيض واضح */
+
+            /* الأبعاد والتوزيع */
             width: 170px; 
-            height: 43px;            
+            height: 43px; 
             text-align: center;
             padding: 6px;
             margin: 6px;
-            color: white !important; /* النص أبيض إجباريًا */
             display: inline-block; 
             font-size:22px !important;
             transition: all 0.2s; 
-
-            /* 💡 تطبيق خصائص التوهج (hue effect) على الزر */
-            border: 2px solid yellow; /* إطار أصفر واضح */
-            box-shadow: 0px 0px 10px yellow; /* ظل توهج أصفر */
 }
 
-/* الألوان المخصصة للنص داخل الزر */
-.yellow-text { color: yellow !important; }
-.green-text { color: lightgreen !important; }
-.blue-bg { background:rgba(11, 11, 97, 0.7) !important; /* خلفية زرقاء داكنة لزر Trainer */ }
+/* تعريف حركة Hue */
+@keyframes hue{
+    0%{filter:hue-rotate(0deg);-webkit-filter:hue-rotate(0deg);}
+    100%{filter:hue-rotate(360deg);-webkit-filter:hue-rotate(360deg);}
+}
+
+
+/* الألوان المخصصة للنص داخل الزر - للحفاظ على التباين */
+.yellow-text { color: black !important; /* يفضل الأسود على الخلفية الصفراء للوضوح */ }
+.green-text { color: darkgreen !important; }
+.blue-bg { 
+    background:rgba(11, 11, 97, 0.7) !important; /* خلفية زرقاء داكنة لزر Trainer */
+    box-shadow: 0px 0px 15px #1E90FF; /* تغيير التوهج إلى الأزرق */
+    border: 1px solid #1E90FF;
+    color: white !important;
+}
 
 
 button:hover {
             /* عند التمرير، زيادة التوهج قليلاً وتغيير لون الإطار */
-            box-shadow: 0 0 30px 5px #FFFFFF; 
-            background-color: rgba(0, 0, 0, 0.9); /* خلفية سوداء أغمق قليلاً عند التمرير */
+            box-shadow: 0 0 40px 10px white; /* توهج أبيض أقوى */
+            background-color: rgba(0, 0, 0, 0.9); /* خلفية سوداء واضحة */
             color: white !important;
             border: 2px solid white; /* حد أبيض ساطع عند التمرير */
 }
 
 /* =================================================== */
-/* التوزيع على عمودين (للتأكيد على التوزيع الصحيح) */
+/* التوزيع على عمودين */
 /* =================================================== */
 #MyItems {
   width: 100%; 
@@ -111,17 +129,16 @@ button:hover {
 }
 
 /* =================================================== */
-/* العناصر العلوية والسفلية */
+/* العناصر العلوية والسفلية (تم حذف .hue من هنا حتى لا يتعارض مع .content) */
 /* =================================================== */
 #clock{float:right;margin-right:2.25%;margin-top: 18px;font-weight:bold;font-size:28px;color: white;}
 #date {float:left;margin-left:1.25%;font-weight:bold;margin-top: 18px;font-size:28px;color: white;}
 .content {width:80%;margin: 10px auto;background:rgba(0,0,0,0.5);color:white;font-size:25px;text-align:center;border-radius:30px;padding:20px;line-height:40px; clear: both;}
 .yellow {color:yellow;}
-/* خصائص الـ hue التي استخدمتها في الشريط السفلي */
-.hue {color:yellow;padding:10px;border-radius:10px;animation:hue 5s linear infinite;-webkit-animation: hue 5s linear infinite;box-shadow: 0px 0px 50px yellow;color:white;background:rgba(255,255,0,0.4);}
 
-/* تعريف الحركة (للتذكير: الحركة لن تُطبق على الأزرار إلا إذا أضفنا خصائص الـ animation لها) */
-@keyframes hue{0%{filter:hue-rotate(0deg);-webkit-filter:hue-rotate(0deg);}100%{filter:hue-rotate(360deg);-webkit-filter:hue-rotate(360deg);}}
+/* ⚠️ ملاحظة: تم إزالة خصائص الـ animation: hue من الـ .hue نفسه في الشريط السفلي وتطبيقها على الزر الرئيسي button */
+.hue {color:yellow;padding:10px;border-radius:10px;box-shadow: 0px 0px 50px yellow;color:white;background:rgba(255,255,0,0.4);} 
+
 .text {padding-bottom:50px;}
 .pointer {cursor: pointer;}
 </style>
@@ -194,7 +211,7 @@ document.getElementById("clock").innerHTML = (Hour+":"+Minute);
     
 <div class="content" >
  	<div class="text" >
- 	 <br><span class="yellow" >Designed, Ported and Compiled by :</span >&nbsp;&nbsp; <span class="hue" >ALssouRy</span>
+ 	 <br><span class="yellow" >Designed, Ported and Compiled by :</span >&nbsp;&nbsp; <span class="hue" style="animation: hue 5s linear infinite;-webkit-animation: hue 5s linear infinite;">ALssouRy</span>
  	</div>
  </div>
 </div>
