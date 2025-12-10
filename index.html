@@ -1,16 +1,32 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>ALssouRy Host For PS4 505 & 672 & 702 & 75X & 900</title> 
+<title>ALssouRy Host For PS4 505 & 672 & 702 & 75X & 900</title> 
 <style type="text/css">
+/* =================================================== */
+/* ⚠️ هذا هو المتحكم الوحيد بالخلفية. يجب التأكد من صحة مسار الصورة هنا. */
+html, body {
+  background-image: url("alssoury.jpeg"); 
+  background-size: cover;       
+  background-repeat: no-repeat;
+  background-position: center; 
+  height: 100%; /* ضمان تغطية كاملة */
+  margin: 0;
+  padding: 0;
+}
+/* =================================================== */
+
 body {
-  background-image: url("alssoury.jpg"); 
-  background-color: #1A1920;   
-  background-repeat:no-repeat; 
-  background-size: cover;      
-  background-position: center;  
-  height:95%;
- }
+  /* تم حذف جميع الخصائص المتعلقة بالخلفية (background-color و background-image) */
+  font-family:sans-serif;
+  font-size:20px;
+  font-weight:lighter;
+  text-align: center;
+  color:#FFFFFF;
+  overflow: hidden;
+  height:95%; 
+}
+
  button {
             background:rgba(15, 15, 83, 0.7); /* لون نيلي شبه شفاف متناسق مع الخلفية */
 		    box-shadow: 0 0 30px 5px #00FFFF; /* ظل سماوي لامع */
@@ -157,7 +173,7 @@ document.getElementById("clock").innerHTML = (Hour+":"+Minute);
   
   setInterval(showdate,1000); </script>
 </head>
-<body class="bg-darker">
+<body>
 <div id="container"  style="">
 <span id="date" ></span><span id="clock" ></span><h1 style='font-size:25px;text-align:center;color:yellow;'>ALssouRy Host For PS4 505 & 672 & 702 & 75X & 900</h1>
 <h1 id=msgs2 style='font-size:25px;text-align:center;color:white;'>Status</h1>
