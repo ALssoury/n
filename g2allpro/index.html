@@ -1,5 +1,6 @@
 <html manifest="Cache.manifest">
 <head>
+<title>ALssouRy Host Auto Exploit GoldHen new PSFree Webkit Lapse 900FW</title>
 <style>
     html, body{
 margin:auto;
@@ -9,34 +10,35 @@ font-weight:lighter;
 text-align: center;
 color:#FFFFFF;
 /* =================================================== */
-/* ⭐️ صورة الخلفية الرئيسية ⭐️ */
-/* ⚠️ يجب تغيير اسم الملف هنا ليطابق اسم الصورة التي سترفعها */
-background-image: url('my_background_image.jpg'); 
+/* بداية كود الخلفية الجديد والمُتحكم الوحيد */
+/* ⭐️ تم حذف جميع تعريفات اللون الثابت للخلفية ⭐️ */
+background-image: url('my_cache_background.jpg'); 
 background-size: cover; 
 background-repeat: no-repeat;
 background-attachment: fixed;
+/* نهاية كود الخلفية */
 /* =================================================== */
 overflow: hidden;
-background-color: #000000;
 }
 .modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px; 
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgba(0,0,0,0.4); 
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  /* ⭐️ تم حذف background-color: rgb(0,0,0); ⭐️ */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity - (شفافية الـ Modal عند الظهور) */
 }
  .content {
   width:90%;
-  height:auto; 
+  height:15%;
   margin-left:3.5%;
-  /* ⭐️ الخلفية الداكنة لشريط المحتوى السفلي ⭐️ */
-  background:rgba(0,0,0,0.7); 
+  /* 💡 تم الإبقاء على الخلفية الداكنة الشفافة للفوتر لظهور النص كما طلبت سابقاً */
+  background:rgba(0,0,0,0.5);
   color:white;
   margin-top:0%;
   font-size:25px;
@@ -44,11 +46,7 @@ background-color: #000000;
   border-radius:30px;
   padding:20px;
   line-height:12px;
-  position:fixed; 
-  bottom:0px; 
-  left: 3.5%;
-  right: 3.5%;
-  z-index: 10; 
+  position:absolute;bottom:0px;
  }
  .title {
   font-size:40px;
@@ -61,38 +59,60 @@ background-color: #000000;
  .yellow {
   color:yellow;
  }
-
-.hue {
-  color: yellow !important; 
-  padding: 10px;
-  border-radius: 10px;
-  background: transparent !important; 
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.hue:hover{
-  color:yellow !important;
-  background:transparent !important;
-}
-
-@keyframes hue-rotate{ 
- 0%{filter:hue-rotate(0deg);-webkit-filter:hue-rotate(0deg);}
- 100%{filter:hue-rotate(360deg);-webkit-filter:hue-rotate(360deg);}
-}
-@keyframes hue-shadow{ 
- 0%{box-shadow: 0px 0px 50px yellow;} 
- 100%{box-shadow: 0px 0px 50px yellow;}
-}
-@keyframes hue{
- 0%{filter:hue-rotate(0deg);-webkit-filter:hue-rotate(0deg);}
- 100%{filter:hue-rotate(360deg);-webkit-filter:hue-rotate(360deg);}
-}
- 
+ .hue {
+  color:yellow;
+  padding:10px;
+  border-radius:10px;
+  animation:hue 5s linear infinite;
+  -webkit-animation: hue 5s linear infinite;
+  box-shadow: 0px 0px 50px yellow;
+  color:white;
+  /* 💡 تم الإبقاء على لون الخلفية الشفاف المشع لعنصر .hue نفسه */
+  background:rgba(255,255,0,0.4);
+ }
+ .hue:hover{
+  color:yellow;
+  background:transparent;
+ }
+ @keyframes hue{
+ 0%{
+ filter:hue-rotate(0deg);
+ -webkit-filter:hue-rotate(0deg);
+ }
+ 10%{
+ box-shadow: 0px 1px 50px yellow;
+ }
+ 20%{
+ box-shadow: 1px 1px 50px yellow;
+ }
+ 30%{
+ box-shadow: 1px 0px 50px yellow;
+ }
+ 40%{
+  box-shadow: 1px -1px 50px yellow;
+ }
+ 50%{
+ box-shadow: 0px -1px 50px yellow;
+ }
+ 60%{
+ box-shadow: -1px -1px 50px yellow;
+ }
+ 70%{
+ box-shadow: -1px 0px 50px yellow;
+ }
+ 80%{
+ box-shadow: -1px 1px 50px yellow;
+ }
+ 90%{
+ box-shadow: 0px 1px 50px yellow;
+ }
+ 100%{
+ filter:hue-rotate(360deg);
+ -webkit-filter:hue-rotate(360deg);
+ }
+ }
  .text {
-  padding-bottom:5px; 
-  line-height: 25px; 
+  padding-bottom:50px;
  }
   .back {
    font-size:25px;
@@ -119,15 +139,21 @@ background-color: #000000;
   width:15%;
   display:flex;
   position: absolute;
-  background: transparent; 
+  
+  /* 💡 تم الإبقاء على الخلفية الشفافة الداكنة هنا */
+  background: rgba(0, 0, 0, 0.500);
   border-radius: 2em;
   border: none;
   padding: 0.8em;
+  
   color: #ffffff;
   padding-left: 1.5em;
+  
   outline: none;
+  box-shadow: 0 4px 6px -5px hsl(0, 0%, 40%), inset 0px 4px 6px -5px hsl(0, 0%, 2%);
+  backdrop-filter: blur(5px);
 }
-
+/* Modal Content */
 .modal-content {
   font-family: BFARNAZ;
   font-size: 18px;
@@ -143,21 +169,20 @@ background-color: #000000;
   animation-name: animatetop;
   animation-duration: 0.4s
 }
-
-/* ⭐️ الأزرار ⭐️ */
 button {
-            background: transparent; 
+            background:rgba(0,0,0,0.5);
+			box-shadow: 0 5px 20px 0 white;
             border: 2px solid black;
             border-radius: 10px;
             width: 200px;
             height: 43px;            
             text-align: center;
-            color: black !important; 
 }
 button:hover {
-            box-shadow: 0 5px 50px 0 white; 
-            color: white !important; 
-			background-color: #0F0F53; 
+            box-shadow: 0 5px 50px 0 white;
+            color: white;
+            border-radius: 10px;
+			background-color: #0F0F53;
 }
 
 hr {
@@ -169,6 +194,7 @@ opacity:0.7;
 #progress {
  font-weight:bold;
  text-shadow: 4px 4px 4px black;
+
  font-size:17px;
 }
 .pointer {cursor: pointer;}
@@ -201,24 +227,23 @@ transform: scale(1.1)
 
     </style>
 <meta charset="utf-8">
-<title>ALssouRy Host Auto Exploit GoldHen new PSFree Webkit Lapse 7.XX - 8.XX - 9.XXFW</title>
+</head>
+<body>
 <script>
-if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
+history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));setTimeout(function(){window.progress.innerHTML="Installing Offline Cache: " + Percent + "%";},500)}
+function DisplayCacheProgress(){setTimeout(function(){window.progress.innerHTML="Page Cached Successfully!!";},1500);setTimeout(function(){window.progress.innerHTML="Reopen the Page !!";},3500);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 </script>
- </head>
-<body> <br>
-<h1 style='text-shadow: 4px 4px 4px black;font-size:30px;text-align:center;color:yellow;'>ALssouRy Host Auto Exploit GoldHen new PSFree Webkit Lapse 7.XX - 8.XX - 9.XXFW</h1>
-<h1 id=progress style='font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:white;'>Jailbreaking....</h1><br>
-<div style="text-align:center;display:none">
-<button id="button-Payload" onMouseOver="progress.innerHTML='GoldHen v2.4 Beta 18 3 by SISTR0 for PS4 9.00 Fw'" onmouseout="progress.innerHTML='Status'" type="button" onclick="goldhen()" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;' > GoldHenV2.4b18.7</button>
-</div>
+<br>
+<h1 style='text-shadow: 4px 4px 4px black;font-size:30px;text-align:center;text-shadow: 4px 4px 4px black;color:yellow;margin-top:1%;'>ALssouRy Host Auto Exploit GoldHen new PSFree Webkit Lapse 900FW</h1>
+<h1 id=progress style='font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:white;'>Caching... Wait</h1>
 
-<div id=all class="content" >
+<div class="content" >
  	    <div class="text" >
- 	        <span style="text-shadow: 4px 4px 4px black;" class="yellow" >Designed, Compiled by :</span >&nbsp;&nbsp; <span style="text-shadow: 4px 4px 4px black;" class="hue" >ALssouRy</span >
- 	        <br><span style="text-shadow: 4px 4px 4px black;" class="yellow" >Super Special Thanks To :</span >&nbsp;&nbsp; <a style="font-size:30px;text-align:center;text-shadow: 4px 4px 4px black;color:white;">Sleirsgoevy , Al Azif , ChendoChap , SiSTRo ,Abc ,Xalfia ,Specter ,Znullptr ... </a>
+ 	        <br><span style="text-shadow: 4px 4px 4px black;" class="yellow" >Designed, Compiled by :</span >&nbsp;&nbsp; <span style="text-shadow: 4px 4px 4px black;" class="hue" >ALssouRy</span>
+ 	        <br><br><br><br><span style="text-shadow: 4px 4px 4px black;" class="yellow" >Super Special Thanks To :</span >&nbsp;&nbsp; <a style="font-size:30px;text-align:center;text-shadow: 4px 4px 4px black;color:white;">Sleirsgoevy , Al Azif , ChendoChap , SiSTRo ,Specter ,Abc ,Xalfia ,Znullptr ,hippie68 ... </a>
 	    </div>
 </div>
 </body>
-<script src="./exploit.js"></script>
+
 </html>
