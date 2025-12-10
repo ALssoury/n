@@ -31,8 +31,8 @@ body {
 /* ⭐️ تصميم الأزرار الموحد (تأثير التوهج المتحرك Hue الكامل) ⭐️ */
 /* =================================================== */
 button {
-            /* 1. جعل النص أسود ثابت */
-            color: black !important; 
+            /* 1. جعل النص أسود ثابت دائمًا */
+            color: #000 !important; 
             
             /* 2. فصل الخلفية المتحركة عن العنصر الرئيسي */
             position: relative; 
@@ -56,7 +56,7 @@ button {
             transition: all 0.2s; 
 }
 
-/* 💡 الخلفية المتحركة المنفصلة (::before) */
+/* 💡 الخلفية المتحركة المنفصلة (::before) - تتحرك دون التأثير على النص */
 button::before {
     content: '';
     position: absolute;
@@ -82,9 +82,10 @@ button::before {
 }
 
 
-/* الألوان المخصصة للنص داخل الزر */
-.yellow-text { color: black !important; } 
-.green-text { color: darkgreen !important; } 
+/* الألوان المخصصة للنص داخل الزر - تم توحيدها لتكون أسود ثابت */
+.yellow-text, .green-text { 
+    color: #000 !important; /* أسود ثابت */
+} 
 
 /* زر الـ Trainer الأزرق (استثناء: لا يحتوي على حركة Hue-rotate) */
 .blue-bg { 
@@ -92,7 +93,7 @@ button::before {
     background:rgba(11, 11, 97, 0.7) !important; 
     box-shadow: 0px 0px 15px #1E90FF; 
     border: 1px solid #1E90FF; 
-    color: white !important; 
+    color: white !important; /* النص أبيض هنا لأنه يتناسب مع الخلفية الزرقاء الداكنة */
 }
 
 /* إزالة الخلفية المتحركة من الزر الأزرق */
@@ -104,8 +105,13 @@ button:hover {
     box-shadow: 0 0 40px 10px #FFD700; 
     /* إعطاء خلفية سوداء للعنصر الرئيسي عند التحويم */
     background-color: rgba(0, 0, 0, 0.9) !important; 
-    color: white !important; 
+    /* 💡 تم إبقاء لون النص أسود أو توحيده إلى #000 لضمان الثبات */
+    color: #000 !important; 
     border: 2px solid #FFD700; 
+}
+/* ملاحظة: النص الأزرق يتغير للأبيض عند التحويم لأنه أصلاً لونه أبيض ليتناسب مع الخلفية الزرقاء */
+.blue-bg:hover {
+    color: white !important;
 }
 
 /* عند التحويم، نزيل الخلفية المتحركة ونستخدم الخلفية السوداء الجديدة */
@@ -158,10 +164,34 @@ button:hover::before {
 }
 
 /* =================================================== */
-/* العناصر العلوية والسفلية */
+/* العناصر العلوية والسفلية - تم تعديلها لتشمل التاريخ والوقت */
 /* =================================================== */
-#clock{float:right;margin-right:2.25%;margin-top: 18px;font-weight:bold;font-size:28px;color: white;}
-#date {float:left;margin-left:1.25%;font-weight:bold;margin-top: 18px;font-size:28px;color: white;}
+.header-bar {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    background: rgba(0, 0, 0, 0.6); 
+    border-radius: 5px;
+    margin: 10px auto; 
+    width: 95%; 
+    max-width: 1200px; 
+    padding: 5px 10px;
+}
+
+#clock, #date {
+    font-weight:bold;
+    font-size:20px; 
+    color: yellow; /* لضمان وضوح التاريخ والوقت */
+    white-space: nowrap; /* لمنع كسر السطر */
+}
+
+.main-title {
+    font-size:25px;
+    text-align:center;
+    color:yellow;
+    flex-grow: 1; /* للسماح للعنوان بأخذ المساحة المتاحة في المنتصف */
+    margin: 0 10px;
+}
 
 .content {
     width:60%; 
@@ -201,8 +231,13 @@ document.getElementById("clock").innerHTML = (Hour+":"+Minute);
 </head>
 <body>
 <div id="container"  style="">
-<span id="date" ></span><span id="clock" ></span>
-<h1 style='font-size:25px;text-align:center;color:yellow; background: rgba(0, 0, 0, 0.6); padding: 5px 10px; border-radius: 5px;'>ALssouRy Host For PS4 505 & 672 & 702 & 75X & 900</h1>
+
+<div class="header-bar">
+    <span id="date"></span>
+    <h1 class='main-title'>ALssouRy Host For PS4 505 & 672 & 702 & 75X & 900</h1>
+    <span id="clock"></span>
+</div>
+
 <h1 id=msgs2 style='font-size:25px;text-align:center;color:white;'>Status</h1>
 
 <div id="MyItems">
