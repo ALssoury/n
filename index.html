@@ -31,30 +31,49 @@ body {
 /* ⭐️ تصميم الأزرار الموحد (تأثير التوهج المتحرك Hue الكامل) ⭐️ */
 /* =================================================== */
 button {
-            
+            /* 1. جعل النص أسود ثابت */
             color: black !important; 
             
-            /* خصائص خلفية التوهج (Hue) */
-            background:rgba(255,255,0,0.4); 
-            padding: 10px; 
-            border-radius: 10px;
-            
-            /* خصائص التوهج والحركة */
-            animation: hue 5s linear infinite; 
-            -webkit-animation: hue 5s linear infinite;
+            /* 2. فصل الخلفية المتحركة عن العنصر الرئيسي */
+            position: relative; 
+            z-index: 1; /* تأكيد أن النص فوق الخلفية */
+            background: transparent !important; /* جعل العنصر الرئيسي شفاف */
+
+            /* خصائص التوهج الثابتة (للحواف) */
             box-shadow: 0px 0px 15px yellow; 
             border: 1px solid yellow; 
 
-            /* الأبعاد والتوزيع */
-            width: 140px; 
-            height: 43px; 
-            text-align: center;
-            padding: 6px;
-            margin: 4px; 
+            /* ... الخصائص الشكلية الأخرى ... */
+            padding: 10px; 
+            border-radius: 10px;
+            width: 140px; 
+            height: 43px; 
+            text-align: center;
+            padding: 6px;
+            margin: 4px; 
             display: inline-block; 
             font-size:22px !important;
             transition: all 0.2s; 
 }
+
+/* 💡 الخلفية المتحركة المنفصلة (::before) */
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* اللون الأساسي للخلفية الصفراء قبل الدوران */
+    background: rgba(255,255,0,0.4); 
+    border-radius: inherit;
+    z-index: -1; 
+    
+    /* تطبيق حركة Hue-rotate هنا فقط */
+    animation: hue 5s linear infinite; 
+    -webkit-animation: hue 5s linear infinite;
+}
+
 
 /* تعريف حركة Hue */
 @keyframes hue{
@@ -64,23 +83,34 @@ button {
 
 
 /* الألوان المخصصة للنص داخل الزر */
-.yellow-text { color: black !important; }
+.yellow-text { color: black !important; } 
 .green-text { color: darkgreen !important; } 
 
-/* زر الـ Trainer الأزرق */
+/* زر الـ Trainer الأزرق (استثناء: لا يحتوي على حركة Hue-rotate) */
 .blue-bg { 
+    /* إلغاء الشفافية وإعادة اللون الأساسي للزر الأزرق */
     background:rgba(11, 11, 97, 0.7) !important; 
     box-shadow: 0px 0px 15px #1E90FF; 
     border: 1px solid #1E90FF; 
     color: white !important; 
 }
 
+/* إزالة الخلفية المتحركة من الزر الأزرق */
+.blue-bg::before {
+    content: none; 
+}
 
 button:hover {
-            box-shadow: 0 0 40px 10px #FFD700; 
-            background-color: rgba(0, 0, 0, 0.9); 
-            color: white !important; 
-            border: 2px solid #FFD700; 
+    box-shadow: 0 0 40px 10px #FFD700; 
+    /* إعطاء خلفية سوداء للعنصر الرئيسي عند التحويم */
+    background-color: rgba(0, 0, 0, 0.9) !important; 
+    color: white !important; 
+    border: 2px solid #FFD700; 
+}
+
+/* عند التحويم، نزيل الخلفية المتحركة ونستخدم الخلفية السوداء الجديدة */
+button:hover::before {
+    content: none; 
 }
 
 /* =================================================== */
