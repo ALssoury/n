@@ -9,33 +9,25 @@ font-weight:lighter;
 text-align: center;
 color:#FFFFFF;
 /* =================================================== */
-/* بداية كود الخلفية الجديد والمُتحكم الوحيد */
+/* ⭐️ صورة الخلفية الرئيسية (لا توجد ألوان إضافية تؤثر عليها) ⭐️ */
 /* ⚠️ يجب تغيير اسم الملف هنا ليطابق اسم الصورة التي سترفعها */
 background-image: url('my_background_image.jpg'); 
 background-size: cover; 
 background-repeat: no-repeat;
 background-attachment: fixed;
-/* نهاية كود الخلفية */
 /* =================================================== */
 overflow: hidden;
+/* ⚠️ مهم: تأكد أن خلفية الـ body ليست صفراء هنا */
+background-color: #000000; /* أو أي لون داكن */
 }
-.modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgba(0,0,0,0.4); 
-}
+
+/* ... (بقية الـ CSS كما هو) ... */
+
  .content {
   width:90%;
   height:auto; 
   margin-left:3.5%;
-  /* ⭐️ الخلفية الداكنة المُضافة ⭐️ */
+  /* ⭐️ الخلفية الداكنة لشريط المحتوى السفلي ⭐️ */
   background:rgba(0,0,0,0.7); 
   color:white;
   margin-top:0%;
@@ -50,169 +42,22 @@ overflow: hidden;
   right: 3.5%;
   z-index: 10; 
  }
- .title {
-  font-size:40px;
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-weight:bolder;
-  margin-bottom:10px;
- }
- .yellow {
-  color:yellow;
- }
-/* ---------------------------------------------------------------------- */
-/* ⭐️ إزالة جميع تأثيرات الحركة والتوهج من .hue ⭐️ */
-/* ---------------------------------------------------------------------- */
-.hue {
-  color: yellow !important; /* تثبيت لون النص أصفر */
-  padding: 10px;
-  border-radius: 10px;
-  background: transparent !important; /* خلفية شفافة */
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
 
-.hue:hover{
-  color:yellow !important;
-  background:transparent !important;
-}
-/* ---------------------------------------------------------------------- */
-/* إزالة جميع Keyframes غير المستخدمة التي تسبب توهجًا */
-/* ---------------------------------------------------------------------- */
-@keyframes hue-rotate{ /* لم يعد مستخدماً */
- 0%{filter:hue-rotate(0deg);-webkit-filter:hue-rotate(0deg);}
- 100%{filter:hue-rotate(360deg);-webkit-filter:hue-rotate(360deg);}
-}
-@keyframes hue-shadow{ /* لم يعد مستخدماً */
- 0%{box-shadow: 0px 0px 50px yellow;} 
- 100%{box-shadow: 0px 0px 50px yellow;}
-}
-@keyframes hue{
- 0%{filter:hue-rotate(0deg);-webkit-filter:hue-rotate(0deg);}
- 100%{filter:hue-rotate(360deg);-webkit-filter:hue-rotate(360deg);}
-}
- 
- .text {
-  padding-bottom:5px; 
-  line-height: 25px; 
- }
-  .back {
-   font-size:25px;
-   margin-top:10px;
-   display:block;
-   line-height:55px;
-   width:20%;
-   text-decoration:none;
-   height:50px;
-   background:white;
-   color:black;
-   border-radius:15px;
-  }
-  .back:hover{
-   border:2px solid white;
-   background:transparent;
-   box-sizing:border-box;
-   color:white;
-  }
- #psip {
-  text-align: center;
-  margin-left: 38%;
-  margin-right: auto;
-  width:15%;
-  display:flex;
-  position: absolute;
-  
-  background: transparent; 
-  border-radius: 2em;
-  border: none;
-  padding: 0.8em;
-  
-  color: #ffffff;
-  padding-left: 1.5em;
-  
-  outline: none;
-}
+/* ... (بقية الـ CSS حتى النهاية) ... */
 
-/* Modal Content */
-.modal-content {
-  font-family: BFARNAZ;
-  font-size: 18px;
-  position: relative;
-  background-color: #dddddd;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s
-}
-
-/* ⭐️ تعديل الأزرار ليكون النص أسود وخلفيتها شفافة ⭐️ */
-button {
-            background: transparent; 
-            border: 2px solid black;
-            border-radius: 10px;
-            width: 200px;
-            height: 43px;            
-            text-align: center;
-            color: black !important; /* تثبيت لون النص بالأسود */
-}
-button:hover {
-            box-shadow: 0 5px 50px 0 white; 
-            color: white !important; 
-			background-color: #0F0F53; 
-}
-
-hr {
-padding:0;
-margin:0;
-opacity:0.7;
-}
-
-#progress {
- font-weight:bold;
- text-shadow: 4px 4px 4px black;
-
- font-size:17px;
-}
-.pointer {cursor: pointer;}
-
-h1 {
-text-shadow: 0.1em 0.1em 0.2em black;
-font-size: 25px;
-text-align: center;
-color: white;
-}
-
-.TextCaption{
-display: block;
-    font-size: 20px;
-    color: #fff;
-    text-decoration: none;
-}
-
-a img {
-    display: inline-block;  text-decoration: none;
-}
-
-a {
-    display: inline-block;  text-decoration: none;
-}
-
-a:hover img, a:hover .TextCaption{
-transform: scale(1.1)
-}
-
-    </style>
+</style>
 <meta charset="utf-8">
 <title>ALssouRy Host Auto Exploit GoldHen new PSFree Webkit Lapse 7.XX - 8.XX - 9.XXFW</title>
 <script>
 if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
+
+// ⭐️ ملاحظة بخصوص JavaScript ⭐️
+// إذا كان لديك دالة جاهزة في exploit.js تسمى loaded() أو exploit_success()
+// تأكد من أن هذه الدالة لا تحتوي على أمر يغير خلفية الـ body إلى اللون الأصفر.
+// الكود الخاطئ الذي يجب البحث عنه وحذفه في ملف الجافاسكريبت:
+// document.body.style.background = 'yellow';
+// document.body.style.backgroundColor = 'yellow';
+// أو أي شيء يغير الـ body إلى اللون الأصفر.
 </script>
  </head>
 <body> <br>
