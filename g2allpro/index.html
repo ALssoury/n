@@ -7,12 +7,12 @@ font-family:sans-serif;
 font-size:20px;
 font-weight:lighter;
 text-align: center;
-color:#FFFFFF;
+color:#FFFFFF; /* لون النص الافتراضي للهيئة، مناسب لخلفية داكنة */
 /* =================================================== */
 /* بداية كود الخلفية الجديد والمُتحكم الوحيد */
 /* ⚠️ يجب تغيير اسم الملف هنا ليطابق اسم الصورة التي سترفعها */
-background-image: url('my_background_image.jpg'); 
-background-size: cover; 
+background-image: url('my_background_image.jpg'); 
+background-size: cover; 
 background-repeat: no-repeat;
 background-attachment: fixed;
 /* نهاية كود الخلفية */
@@ -20,24 +20,23 @@ background-attachment: fixed;
 overflow: hidden;
 }
 .modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px; 
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  /* تم ترك لون خلفية الـ Modal كما هو لتعمل كقائمة منبثقة معتمة */
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
 }
  .content {
   width:90%;
   height:15%;
   margin-left:3.5%;
-  background:rgba(0,0,0,0.5);
+  background:rgba(0,0,0,0.5); /* خلفية شبه شفافة داكنة لصندوق المحتوى */
   color:white;
   margin-top:0%;
   font-size:25px;
@@ -58,57 +57,75 @@ overflow: hidden;
  .yellow {
   color:yellow;
  }
- .hue {
-  color:yellow;
-  padding:10px;
-  border-radius:10px;
-  animation:hue 5s linear infinite;
-  -webkit-animation: hue 5s linear infinite;
-  box-shadow: 0px 0px 50px yellow;
-  color:white;
-  background:rgba(255,255,0,0.4);
- }
- .hue:hover{
-  color:yellow;
-  background:transparent;
- }
- @keyframes hue{
+/* ---------------------------------------------------------------------- */
+/* ⭐️ التعديل الجذري: فصل حركة الخلفية عن النص في وسم .hue ⭐️ */
+/* ---------------------------------------------------------------------- */
+.hue {
+  color: yellow !important; /* تثبيت لون النص أصفر */
+  padding: 10px;
+  border-radius: 10px;
+  /* استخدام خلفية شفافة للعنصر الرئيسي للسماح بـ ::before بالظهور */
+  background: transparent !important; 
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  /* تطبيق animation هنا فقط لتأثير ظل الصندوق */
+  animation: hue-shadow 5s linear infinite; 
+  -webkit-animation: hue-shadow 5s linear infinite;
+}
+
+/* طبقة الخلفية المتحركة لـ .hue */
+.hue::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,0,0.4); /* لون الخلفية الأساسي */
+    border-radius: inherit;
+    z-index: -1; 
+    
+    /* تطبيق دوران اللون (hue-rotate) هنا فقط */
+    animation: hue-rotate 5s linear infinite;
+    -webkit-animation: hue-rotate 5s linear infinite;
+}
+
+.hue:hover{
+  color:yellow !important; /* تثبيت اللون على أصفر عند التحويم */
+  background:transparent !important;
+}
+
+/* ---------------------------------------------------------------------- */
+/* تعديل على Keyframes: فصل حركة الظل عن دوران الألوان */
+/* ---------------------------------------------------------------------- */
+/* حركة دوران الألوان (تطبق على ::before) */
+@keyframes hue-rotate{
  0%{
  filter:hue-rotate(0deg);
  -webkit-filter:hue-rotate(0deg);
- }
- 10%{
- box-shadow: 0px 1px 50px yellow;
- }
- 20%{
- box-shadow: 1px 1px 50px yellow;
- }
- 30%{
- box-shadow: 1px 0px 50px yellow;
- }
- 40%{
-  box-shadow: 1px -1px 50px yellow;
- }
- 50%{
- box-shadow: 0px -1px 50px yellow;
- }
- 60%{
- box-shadow: -1px -1px 50px yellow;
- }
- 70%{
- box-shadow: -1px 0px 50px yellow;
- }
- 80%{
- box-shadow: -1px 1px 50px yellow;
- }
- 90%{
- box-shadow: 0px 1px 50px yellow;
  }
  100%{
  filter:hue-rotate(360deg);
  -webkit-filter:hue-rotate(360deg);
  }
- }
+}
+
+/* حركة ظل الصندوق (تطبق على .hue نفسه) */
+@keyframes hue-shadow{
+ 0%{box-shadow: 0px 0px 50px yellow;} 
+ 10%{box-shadow: 0px 1px 50px yellow;}
+ 20%{box-shadow: 1px 1px 50px yellow;}
+ 30%{box-shadow: 1px 0px 50px yellow;}
+ 40%{box-shadow: 1px -1px 50px yellow;}
+ 50%{box-shadow: 0px -1px 50px yellow;}
+ 60%{box-shadow: -1px -1px 50px yellow;}
+ 70%{box-shadow: -1px 0px 50px yellow;}
+ 80%{box-shadow: -1px 1px 50px yellow;}
+ 90%{box-shadow: 0px 1px 50px yellow;}
+ 100%{box-shadow: 0px 0px 50px yellow;}
+}
+ 
  .text {
   padding-bottom:50px;
  }
@@ -150,6 +167,7 @@ overflow: hidden;
   box-shadow: 0 4px 6px -5px hsl(0, 0%, 40%), inset 0px 4px 6px -5px hsl(0, 0%, 2%);
   backdrop-filter: blur(5px);
 }
+
 /* Modal Content */
 .modal-content {
   font-family: BFARNAZ;
@@ -166,18 +184,22 @@ overflow: hidden;
   animation-name: animatetop;
   animation-duration: 0.4s
 }
+
+/* ⭐️ تعديل الأزرار ليكون النص أسود وثابت ⭐️ */
 button {
-            background:rgba(0,0,0,0.5);
-			box-shadow: 0 5px 20px 0 white;
+            /* لون خلفية فاتح للنص الأسود */
+            background:rgba(255, 255, 255, 0.7); 
+			box-shadow: 0 5px 20px 0 black;
             border: 2px solid black;
             border-radius: 10px;
             width: 200px;
             height: 43px;            
             text-align: center;
+            color: black !important; /* تثبيت لون النص بالأسود */
 }
 button:hover {
             box-shadow: 0 5px 50px 0 white;
-            color: white;
+            color: white !important; /* العودة للأبيض على خلفية داكنة عند التحويم للتباين */
             border-radius: 10px;
 			background-color: #0F0F53;
 }
@@ -230,10 +252,10 @@ if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 </script>
  </head>
 <body> <br>
-<h1 style='text-shadow: 4px 4px 4px black;font-size:30px;text-align:center;text-shadow: 4px 4px 4px black;color:yellow;'>Karo Host Auto Exploit GoldHen new PSFree Webkit Lapse 7.XX - 8.XX - 9.XXFW</h1>
+<h1 style='text-shadow: 4px 4px 4px black;font-size:30px;text-align:center;text-shadow: 4px 4px 4px black;color:yellow;'>ALssouRy Host Auto Exploit GoldHen new PSFree Webkit Lapse 7.XX - 8.XX - 9.XXFW</h1>
 <h1 id=progress style='font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:white;'>Jailbreaking....</h1><br>
 <div style="text-align:center;display:none">
-<button id="button-Payload" onMouseOver="progress.innerHTML='GoldHen v2.4 Beta 18 3 by SISTR0 for PS4 9.00 Fw'" onmouseout="progress.innerHTML='Status'" type="button" onclick="goldhen()" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:#CEC52A' > GoldHenV2.4b18.7</button>
+<button id="button-Payload" onMouseOver="progress.innerHTML='GoldHen v2.4 Beta 18 3 by SISTR0 for PS4 9.00 Fw'" onmouseout="progress.innerHTML='Status'" type="button" onclick="goldhen()" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;' > GoldHenV2.4b18.7</button>
 </div>
 
 <div id=all class="content" >
