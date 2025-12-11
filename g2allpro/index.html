@@ -10,7 +10,9 @@ font-weight:lighter;
 text-align: center;
 color:#FFFFFF;
 /* =================================================== */
-/* ⚠️ اعتماد كلي على تحميل الصورة (وإلا سيعرض المتصفح لونه الافتراضي) ⚠️ */
+/* ⭐️ اللون الاحتياطي (Fallback Color): تم إعادته لضمان عدم ظهور الأبيض ⭐️ */
+background-color: #000000; 
+/* ⭐️ صورة الخلفية الرئيسية (ستظهر فوق الأسود إذا تم تحميلها) ⭐️ */
 background-image: url('my_cache_background.jpg'); 
 background-size: cover; 
 background-repeat: no-repeat;
@@ -33,19 +35,19 @@ overflow: hidden;
 }
  .content {
   width:90%;
-  height:auto; 
+  height:120px; /* تم تعديل الارتفاع لاستيعاب سطرين */
   margin-left:3.5%;
-  /* ⭐️ الخلفية الداكنة لشريط المحتوى السفلي (مطلوبة لوضوح النص) ⭐️ */
-  background:rgba(0,0,0,0.7); 
+  /* ⭐️ الخلفية الداكنة لشريط المحتوى السفلي (تم زيادة الشفافية) ⭐️ */
+  background:rgba(0,0,0,0.8); 
   color:white;
   margin-top:0%;
   font-size:25px;
   text-align:center;
   border-radius:30px;
   padding:20px;
-  line-height:12px;
+  line-height:30px; /* مسافة بين الأسطر */
   position:fixed; 
-  bottom:0px; 
+  bottom:10px; /* تثبيت في الأسفل */
   left: 3.5%;
   right: 3.5%;
   z-index: 10; 
