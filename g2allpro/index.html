@@ -10,14 +10,13 @@ font-weight:lighter;
 text-align: center;
 color:#FFFFFF;
 /* =================================================== */
-/* ⭐️ اللون الاحتياطي (Fallback Color): تم إعادته لضمان عدم ظهور الأبيض ⭐️ */
-background-color: #000000; 
-/* ⭐️ صورة الخلفية الرئيسية (ستظهر فوق الأسود إذا تم تحميلها) ⭐️ */
+/* ⚠️ تم حذف background-color. المتصفح سيعتمد فقط على الصورة ⚠️ */
+/* ⭐️ صورة الخلفية الرئيسية ⭐️ */
 background-image: url('my_cache_background.jpg'); 
 background-size: cover; 
 background-repeat: no-repeat;
 background-attachment: fixed;
-background-position: center; /* ⭐️ تم التوسيط ⭐️ */
+background-position: center;
 /* =================================================== */
 overflow: hidden;
 }
@@ -35,9 +34,9 @@ overflow: hidden;
 }
  .content {
   width:90%;
-  height:120px; /* الارتفاع لاستيعاب السطرين */
+  height:15%; /* حجم ثابت للشريط السفلي */
   margin-left:3.5%;
-  /* ⭐️ الخلفية الداكنة لشريط المحتوى السفلي (تم زيادة الشفافية) ⭐️ */
+  /* ⭐️ الخلفية الداكنة للشريط السفلي (0.8 تعني شفافية قليلة) ⭐️ */
   background:rgba(0,0,0,0.8); 
   color:white;
   margin-top:0%;
@@ -45,9 +44,9 @@ overflow: hidden;
   text-align:center;
   border-radius:30px;
   padding:20px;
-  line-height:30px; /* مسافة بين الأسطر */
-  position:fixed; 
-  bottom:10px; /* تثبيت في الأسفل */
+  line-height:12px; /* تقليل المسافة بين الأسطر */
+  position:absolute; /* تثبيت مطلق في الأسفل */
+  bottom:0px; /* في الأسفل تماماً */
   left: 3.5%;
   right: 3.5%;
   z-index: 10; 
@@ -94,7 +93,6 @@ overflow: hidden;
  
  .text {
   padding-bottom:5px; 
-  line-height: 25px; 
  }
   .back {
    font-size:25px;
