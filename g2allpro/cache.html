@@ -10,46 +10,41 @@ font-weight:lighter;
 text-align: center;
 color:#FFFFFF;
 /* =================================================== */
-/* ⚠️ تم حذف background-color. المتصفح سيعتمد فقط على الصورة ⚠️ */
-/* ⭐️ صورة الخلفية الرئيسية (ستظهر فوق الأسود إذا تم تحميلها) ⭐️ */
 background-image: url('my_cache_background.jpg'); 
 background-size: cover; 
 background-repeat: no-repeat;
 background-attachment: fixed;
-background-position: center; /* توسيط الصورة */
+background-position: center;
 /* =================================================== */
 overflow: hidden;
 }
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  /* ⭐️ شفافية الـ Modal الداكنة ⭐️ */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
 }
+/* ⭐️ تنسيق الشريط السفلي المطلب: خلفية داكنة، تثبيت في الأسفل، أسطر متقاربة ⭐️ */
  .content {
   width:90%;
-  /* 💡 زيادة الـ height لاستيعاب السطرين */
   height:120px; 
   margin-left:3.5%;
-  /* 💡 الخلفية الداكنة لشريط المحتوى السفلي (تم التأكيد) */
-  background:rgba(0,0,0,0.8); /* تم زيادة الشفافية قليلاً للتركيز */
+  background:rgba(0,0,0,0.8); /* الخلفية الداكنة المطلوبة */
   color:white;
   margin-top:0%;
   font-size:25px;
   text-align:center;
   border-radius:30px;
   padding:20px;
-  line-height:30px; /* زيادة مسافة الأسطر لتقليل الازدحام */
-  /* تثبيت العنصر في الأسفل */
-  position:fixed; 
-  bottom:10px; /* مسافة بسيطة من أسفل الشاشة */
+  line-height:30px; /* الأسطر المتقاربة */
+  position:fixed;  /* التثبيت */
+  bottom:10px; /* مسافة من الأسفل */
   left: 3.5%;
   right: 3.5%;
  }
@@ -116,7 +111,7 @@ overflow: hidden;
  }
  }
  .text {
-  padding-bottom:5px; /* تم تعديل هذه القيمة */
+  padding-bottom:5px;
  }
   .back {
    font-size:25px;
@@ -143,20 +138,16 @@ overflow: hidden;
   width:15%;
   display:flex;
   position: absolute;
-  
   background: rgba(0, 0, 0, 0.500);
   border-radius: 2em;
   border: none;
   padding: 0.8em;
-  
   color: #ffffff;
   padding-left: 1.5em;
-  
   outline: none;
   box-shadow: 0 4px 6px -5px hsl(0, 0%, 40%), inset 0px 4px 6px -5px hsl(0, 0%, 2%);
   backdrop-filter: blur(5px);
 }
-/* Modal Content */
 .modal-content {
   font-family: BFARNAZ;
   font-size: 18px;
