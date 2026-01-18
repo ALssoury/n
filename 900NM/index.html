@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html, body {
     margin: 0 !important;
     padding: 0 !important;
@@ -112,11 +113,9 @@ html, body {
  -webkit-filter:hue-rotate(360deg);
  }
  }
-.text {
-  padding: 0;
-  margin: 0;
-  line-height: 1.8;
-}
+ .text {
+  padding-bottom:50px;
+ }
   .back {
    font-size:25px;
    margin-top:10px;
@@ -135,6 +134,27 @@ html, body {
    box-sizing:border-box;
    color:white;
   }
+ #psip {
+  text-align: center;
+  margin-left: 38%;
+  margin-right: auto;
+  width:15%;
+  display:flex;
+  position: absolute;
+  
+  background: rgba(0, 0, 0, 0.500);
+  border-radius: 2em;
+  border: none;
+  padding: 0.8em;
+  
+  color: #ffffff;
+  padding-left: 1.5em;
+  
+  outline: none;
+  box-shadow: 0 4px 6px -5px hsl(0, 0%, 40%), inset 0px 4px 6px -5px hsl(0, 0%, 2%);
+  backdrop-filter: blur(5px);
+}
+/* Modal Content */
 .modal-content {
   font-family: BFARNAZ;
   font-size: 18px;
@@ -840,7 +860,7 @@ function webexp()
         }
 </script>
 </head>
-<body style='background-color:transparent'>
+<body style='background-color:#1A1920'>
 <h1 style='text-shadow: 4px 4px 4px black;font-size:30px;text-align:center;text-shadow: 4px 4px 4px black;color:yellow;margin-top:1%;'>ALssouRy Host Manual Exploit Compressed + New Webkit Version 9.00 fw</h1>
 <h1 id=progress style='font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:white;'>Status</h1>
 <div id=all style="text-align:center;">
@@ -904,6 +924,7 @@ function webexp()
 <button id="button-Payload" onMouseOver="progress.innerHTML='Red dead redemption 2 mod  menu 1.19 V1.3.6 by RF0oDxM0Dz (R1 + Square) '" onmouseout="progress.innerHTML='Status'" type="button" onclick="load_Oysters119()" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:red' > RDR2 V1.19 </button>
 <button id="button-Payload" onMouseOver="progress.innerHTML='Red dead redemption 2 mod  menu 1.24 V1.3.6 by RF0oDxM0Dz (R1 + Square) '" onmouseout="progress.innerHTML='Status'" type="button" onclick="load_Oysters124()" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:red' > RDR2 V1.24 </button>
 <button id="button-Payload" onMouseOver="progress.innerHTML='Red dead redemption 2 mod  menu 1.29 V1.3.6 by RF0oDxM0Dz (R1 + Square) '" onmouseout="progress.innerHTML='Status'" type="button" onclick="load_Oysters129()" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:red' > RDR2 V1.29 </button>
+<br><br><br></div>
 <div id=Linuxs style="text-align:center;display:none">
 <button style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="progress.innerHTML='back to base menu'" onmouseout="progress.innerHTML='ALssouRy Host 5.05 fw'" onclick="backall(); return false"> Back to Menu </button>
 <br><br>
@@ -920,6 +941,7 @@ function webexp()
 <button  onMouseOver="progress.innerHTML='LinuxLoader 5gb by Nazky'" onmouseout="progress.innerHTML='Status'" type="button" onclick="Linux5()" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white'>Linux 5GB</button>
 <br><br>
 <button  onMouseOver="progress.innerHTML='Whos That Southbridge'" onmouseout="progress.innerHTML='Status'" type="button" onclick="Linux6()" style='width: 300px;height: 50px;font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white'>Whos_That_Southbridge</button>
+<br><br><br>
 </div>
 <div id=Tools style="text-align:center;display:none">
 <button style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="progress.innerHTML='back to base menu'" onmouseout="progress.innerHTML='ALssouRy Host 5.05 fw'" onclick="backall(); return false"> Back to Menu </button>
@@ -931,6 +953,7 @@ function webexp()
 <button id="button-Payload" onMouseOver="progress.innerHTML='Rif Renamer'" onmouseout="progress.innerHTML='Status'" type="button" onclick="load_RIFRenamer()" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > Rif renamer </button>
 <button id="button-Payload" onMouseOver="progress.innerHTML='permanentuart'" onmouseout="progress.innerHTML='Status'" type="button" onclick="load_permanentuart()" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > permanent uart </button>
 <button id="button-Payload" onMouseOver="progress.innerHTML='disable aslr'" onmouseout="progress.innerHTML='Status'" type="button" onclick="load_DisableASLR()" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > Disable Aslr </button>
+<br><br><br>
 </div>
 <div id=Dumpers style="text-align:center;display:none">
 <button style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="progress.innerHTML='back to base menu'" onmouseout="progress.innerHTML='ALssouRy Host 5.05 fw'" onclick="backall(); return false"> Back to Menu </button>
@@ -944,14 +967,14 @@ function webexp()
 <br><br>
 <button id="button-Payload" onMouseOver="progress.innerHTML='kernel dumper'" onmouseout="progress.innerHTML='Status'" type="button" onclick="load_KernelDumper()" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > Kernel Dumper </button>
 <button id="button-Payload" onMouseOver="progress.innerHTML='module dumper'" onmouseout="progress.innerHTML='Status'" type="button" onclick="load_ModuleDumper()" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > Module Dumper </button>
+<br><br><br>
 </div>
-<br>
-<div class="content">
-    <div class="text">
-        <span style="text-shadow: 2px 2px 4px black;" class="yellow">Designed, Compiled by :</span> 
-        <span style="text-shadow: 2px 2px 4px black;" class="hue">ALssouRy</span>
-        <span style="text-shadow: 2px 2px 4px black;" class="yellow">Super Special Thanks To :</span> 
-        <span style="text-shadow: 2px 2px 4px black; color: white;">Sleirsgoevy, Al Azif, ChendoChap, SiSTRo, Specter, Abc, Znullptr, hippie68 ...</span>
+<br><br><br><br><br>
+<div class="content" >
+ 	    <div class="text" >
+ 	        <br><span style="text-shadow: 4px 4px 4px black;" class="yellow" >Designed, Compiled by :  </span >&nbsp;&nbsp; <span style="text-shadow: 4px 4px 4px black;" class="hue" >ALssouRy</span>
+ 	        <br><br><br><br><span style="text-shadow: 4px 4px 4px black;" class="yellow" >Super Special Thanks To :</span >&nbsp;&nbsp; <a style="font-size:30px;text-align:center;text-shadow: 4px 4px 4px black;color:white;">Sleirsgoevy , Al Azif , ChendoChap , SiSTRo ,Specter ,Abc ,Znullptr ,hippie68 ... </a>
+	    </div>
 </div>
 <script>
 localStorage.setItem('fanthreshold', tempC.value);
@@ -1198,5 +1221,4 @@ bzip2.decompress = function(bits, size, len) {
 };
 </script>
 </body>
-
 </html>
