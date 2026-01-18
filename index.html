@@ -210,7 +210,11 @@ button:hover::before {
 
 .hue {color:yellow;padding:10px;border-radius:10px;box-shadow: 0px 0px 50px yellow;color:white;background:rgba(255,255,0,0.4);} 
 
-.text {padding-bottom:0px;} 
+.text {
+  padding: 0;
+  margin: 0;
+  line-height: 1.8;
+}
 .pointer {cursor: pointer;}
 </style>
 <script>
@@ -293,11 +297,14 @@ document.getElementById("clock").innerHTML = (Hour+":"+Minute);
         <a href="http://karo218.ir/PS4TRAINER/index.html"><button class="pointer wide-button blue-bg" onMouseOver="msgs2.innerHTML='PS4Trainer Offline'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>PS4Trainer Offline (27.01.2024)</B></button></a>
     </div>
     
-<div class="content" >
- 	<div class="text" >
- 	 <br><span class="yellow" >Designed, Ported and Compiled by :</span >&nbsp;&nbsp; <span class="hue" style="animation: hue 5s linear infinite;-webkit-animation: hue 5s linear infinite;">ALssouRy</span>
- 	</div>
- </div>
+<div class="content">
+    <div class="text">
+        <span style="text-shadow: 2px 2px 4px black;" class="yellow">Designed, Compiled by :</span> 
+        <span style="text-shadow: 2px 2px 4px black;" class="hue">ALssouRy</span>
+        <br>
+        <span style="text-shadow: 2px 2px 4px black;" class="yellow">Super Special Thanks To :</span> 
+        <span style="text-shadow: 2px 2px 4px black; color: white;">Sleirsgoevy, Al Azif, ChendoChap, SiSTRo, Specter, Abc, Znullptr, hippie68 ...</span>
+    </div>
 </div>
 </body>
 </html>
