@@ -1,231 +1,180 @@
 <html manifest="Cache.manifest">
 <head>
 <style>
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* BODY + BACKGROUND */
 html, body {
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    min-height: 100vh !important;
-    overflow: hidden !important;
-    background-color: transparent !important;
-    background-image: url('my_cache_background.jpg') !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-attachment: fixed !important;
-    background-position: center !important;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: transparent;
+    background-image: url('my_cache_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: Arial, sans-serif;
 }
+
+/* MODAL */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    display: none;
+    position: fixed;
+    z-index: 50;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
 }
+
+/* BOTTOM CONTENT BAR */
 .content {
-  width: 95%;
-  max-width: 800px;
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  font-size: 16px;
-  text-align: center;
-  border-radius: 20px;
-  padding: 15px 20px;
-  line-height: 1.5;
-  position: fixed;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
+    width: 95%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 15px 20px;
+    line-height: 1.5;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    box-shadow: 0 0 20px black;
 }
- .title {
-  font-size:40px;
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-weight:bolder;
-  margin-bottom:10px;
- }
- .yellow {
-  color:yellow;
- }
- .hue {
-  color:yellow;
-  padding:10px;
-  border-radius:10px;
-  animation:hue 5s linear infinite;
-  -webkit-animation: hue 5s linear infinite;
-  box-shadow: 0px 0px 50px yellow;
-  color:white;
-  background:rgba(255,255,0,0.4);
- }
- .hue:hover{
-  color:yellow;
-  background:transparent;
- }
- @keyframes hue{
- 0%{
- filter:hue-rotate(0deg);
- -webkit-filter:hue-rotate(0deg);
- }
- 10%{
- box-shadow: 0px 1px 50px yellow;
- }
- 20%{
- box-shadow: 1px 1px 50px yellow;
- }
- 30%{
- box-shadow: 1px 0px 50px yellow;
- }
- 40%{
-  box-shadow: 1px -1px 50px yellow;
- }
- 50%{
- box-shadow: 0px -1px 50px yellow;
- }
- 60%{
- box-shadow: -1px -1px 50px yellow;
- }
- 70%{
- box-shadow: -1px 0px 50px yellow;
- }
- 80%{
- box-shadow: -1px 1px 50px yellow;
- }
- 90%{
- box-shadow: 0px 1px 50px yellow;
- }
- 100%{
- filter:hue-rotate(360deg);
- -webkit-filter:hue-rotate(360deg);
- }
- }
- .text {
-  padding-bottom:50px;
- }
-  .back {
-   font-size:25px;
-   margin-top:10px;
-   display:block;
-   line-height:55px;
-   width:20%;
-   text-decoration:none;
-   height:50px;
-   background:white;
-   color:black;
-   border-radius:15px;
-  }
-  .back:hover{
-   border:2px solid white;
-   background:transparent;
-   box-sizing:border-box;
-   color:white;
-  }
- #psip {
-  text-align: center;
-  margin-left: 38%;
-  margin-right: auto;
-  width:15%;
-  display:flex;
-  position: absolute;
-  
-  background: rgba(0, 0, 0, 0.500);
-  border-radius: 2em;
-  border: none;
-  padding: 0.8em;
-  
-  color: #ffffff;
-  padding-left: 1.5em;
-  
-  outline: none;
-  box-shadow: 0 4px 6px -5px hsl(0, 0%, 40%), inset 0px 4px 6px -5px hsl(0, 0%, 2%);
-  backdrop-filter: blur(5px);
+
+/* TEXT WRAPPER */
+.text {
+    padding-bottom: 10px;
 }
-/* Modal Content */
-.modal-content {
-  font-family: BFARNAZ;
-  font-size: 18px;
-  position: relative;
-  background-color: #dddddd;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s
+
+/* CREDITS BOX */
+.credits-box {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 12px 18px;
+    display: inline-block;
+    box-shadow: 0 0 15px black;
 }
+
+/* EACH LINE */
+.credits-line {
+    margin: 6px 0;
+    text-align: center;
+}
+
+/* LABEL TEXT */
+.yellow {
+    color: #CEC52A;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black;
+}
+
+/* NAME WITH HUE EFFECT */
+.hue {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    animation: hue 5s linear infinite;
+    box-shadow: 0 0 40px yellow;
+    color: white;
+    background: rgba(255,255,0,0.35);
+    text-shadow: 2px 2px 4px black;
+}
+
+.hue:hover {
+    color: yellow;
+    background: transparent;
+}
+
+/* THANKS NAMES */
+.credits-names {
+    display: block;
+    margin-top: 5px;
+    color: white;
+    font-size: 14px;
+    text-shadow: 2px 2px 4px black;
+}
+
+/* HUE ANIMATION */
+@keyframes hue {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* BUTTONS */
 button {
-            background:rgba(0,0,0,0.5);
-			box-shadow: 0 5px 20px 0 white;
-            border: 2px solid black;
-            border-radius: 10px;
-            width: 200px;
-            height: 43px;            
-            text-align: center;
+    background: rgba(0,0,0,0.5);
+    box-shadow: 0 5px 20px white;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 200px;
+    height: 43px;
+    text-align: center;
+    cursor: pointer;
 }
+
 button:hover {
-            box-shadow: 0 5px 50px 0 white;
-            color: white;
-            border-radius: 10px;
-			background-color: #0F0F53;
+    box-shadow: 0 5px 50px white;
+    color: white;
+    background-color: #0F0F53;
 }
 
-hr {
-padding:0;
-margin:0;
-opacity:0.7;
-}
-
+/* PROGRESS TEXT */
 #progress {
- font-weight:bold;
- text-shadow: 4px 4px 4px black;
-
- font-size:17px;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px black;
+    font-size: 17px;
 }
-.pointer {cursor: pointer;}
 
+/* HEADERS */
 h1 {
-text-shadow: 0.1em 0.1em 0.2em black;
-font-size: 25px;
-text-align: center;
-color: white;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    font-size: 25px;
+    text-align: center;
+    color: white;
 }
 
-.TextCaption{
-display: block;
-    font-size: 20px;
-    color: #fff;
+/* LINKS */
+a {
+    display: inline-block;
     text-decoration: none;
 }
 
 a img {
-    display: inline-block;  text-decoration: none;
+    display: inline-block;
 }
 
-a {
-    display: inline-block;  text-decoration: none;
+a:hover img,
+a:hover .TextCaption {
+    transform: scale(1.1);
 }
 
-a:hover img, a:hover .TextCaption{
-transform: scale(1.1)
-}
+/* MISC */
+.pointer { cursor: pointer; }
 
-    </style>
+hr {
+    opacity: 0.7;
+}
+</style>
 <meta charset="utf-8">
 <title>ALssouRy Host Manual Exploit Compressed + New Webkit Version 9.00 fw</title>
 <script>
@@ -966,15 +915,20 @@ function webexp()
 <br><br>
 <button id="button-Payload" onMouseOver="progress.innerHTML='kernel dumper'" onmouseout="progress.innerHTML='Status'" type="button" onclick="load_KernelDumper()" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > Kernel Dumper </button>
 <button id="button-Payload" onMouseOver="progress.innerHTML='module dumper'" onmouseout="progress.innerHTML='Status'" type="button" onclick="load_ModuleDumper()" style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' > Module Dumper </button>
-<br><br><br><br>
 <div class="content">
-    <div class="text">
-        <span style="text-shadow: 2px 2px 4px black;" class="yellow">Designed, Compiled by :</span> 
-        <span style="text-shadow: 2px 2px 4px black;" class="hue">ALssouRy</span>
-        <br>
-        <span style="text-shadow: 2px 2px 4px black;" class="yellow">Super Special Thanks To :</span> 
-        <span style="text-shadow: 2px 2px 4px black; color: white;">Sleirsgoevy, Al Azif, ChendoChap, SiSTRo, Specter, Abc
+  <div class="credits-box">
+    <div class="line">
+      <span class="label">Designed, Compiled by :</span>
+      <span class="name">ALssouRy</span>
     </div>
+
+    <div class="line">
+      <span class="label">Super Special Thanks To :</span>
+      <span class="thanks">
+        Sleirsgoevy, Al Azif, ChendoChap, SiSTRo, Specter, Abc
+      </span>
+    </div>
+  </div>
 </div>
 <script>
 localStorage.setItem('fanthreshold', tempC.value);
