@@ -10,13 +10,15 @@ CACHE:
 950.bin
 exploit.js
 index.html
+cache.html
 payload.bin
+my_cache_background.jpg
 
 NETWORK: 
-* SETTINGS: 
-prefer-online:  
+* 
+SETTINGS: 
+prefer-online:  
 
 
-# Version: 2.0.2 - Updated Footer Style
+# Version: 2.0.3 - Added background image and cache.html
 # 2025-12.11 11:32:00
-
